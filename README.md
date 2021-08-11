@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-yarn add / npm install @DaanGamesDG/logger
+yarn add / npm install @daangamesdg/logger
 ```
 
 ## Usage
@@ -15,8 +15,8 @@ Basic Usage
 ```ts
 import { Logger } from "@DaanGamesDG/logger";
 
-const logger = new Logger({ name: "name", timestamp: boolean });
-logger.info(...unknown[]);
+const logger = new Logger({ name: "name", timestamp: true }); // options: { name: string; timestamp?: boolean (default = true) }
+logger.info(anything, you, like);
 ```
 
 Advanced
@@ -49,9 +49,11 @@ declare module "@DaanGamesDG/logger" {
 import "absolute/path/to/CustomLogger";
 import { Logger } from "@DaanGamesDG/logger";
 
-const logger = new Logger({ name: "name", timestamp: boolean });
+const logger = new Logger({ name: "name", timestamp: true });
 logger.test(); // logs "test"
 ```
+
+*Note: the examples writting in TypeScript*
 
 ## Author
 
