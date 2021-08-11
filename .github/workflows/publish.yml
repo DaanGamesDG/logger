@@ -3,7 +3,7 @@ on:
   release:
     types: [published]
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -11,16 +11,9 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - name: Install dependencies
-        run: yarn install
-
-      - name: TypeScript Compiler
-        run: yarn run build
-
-      - name: Run Linter
-        run: yarn run lint
-
-      - name: Publish Package
-      - run: yarn publish dist --access public
+      - run: npm install
+      - run: npm run build
+      - run: npm run lint
+      - run: npm publish dist --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
