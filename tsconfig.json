@@ -25,5 +25,5 @@
 		"esModuleInterop": true
 	},
 	"exclude": ["node_modules"],
-	"include": ["./src/**/*", "LICENSE", "package.json", "README.md"]
+	"include": ["./src/**/*", "./package.json"]
 }
