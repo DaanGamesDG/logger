@@ -1,21 +1,57 @@
-<h1 align="center">project-template</h1>
+<h1 align="center">@DaanGamesDG/logger</h1>
 
-> Personal project template by DaanGamesDG
+> A simple logger you can use to log stuff in the console
 
 ## Install
 
 ```sh
-yarn install
+yarn add / npm install @DaanGamesDG/logger
 ```
 
 ## Usage
 
-_You can also use `npm` instead of `yarn`_
+Basic Usage
 
-- **yarn run dev** _(starts dev script)_
-- **yarn run build** _(compiles the code and saves it in the dist)_
-- **yarn run start** _(runs the compiled code)_
-- **yarn run lint** _(runs eslint to check your files)_
+```ts
+import { Logger } from "@DaanGamesDG/logger";
+
+const logger = new Logger({ name: "name", timestamp: boolean });
+logger.info(...unknown[]);
+```
+
+Advanced
+
+```ts
+/* Customlogger.ts */
+import { Structures } from "@DaanGamesDG/logger";
+
+Structures.extend(
+	"Logger",
+	(Logger) =>
+		class CustomLogger extends Logger {
+			// do what ever you want here
+
+			// example
+			public test(): void {
+				console.log("test");
+			}
+		}
+);
+
+// Required if you use TypeScript
+declare module "@DaanGamesDG/logger" {
+	class Logger {
+		test(): void;
+	}
+}
+
+/* index.ts */
+import "absolute/path/to/CustomLogger";
+import { Logger } from "@DaanGamesDG/logger";
+
+const logger = new Logger({ name: "name", timestamp: boolean });
+logger.test(); // logs "test"
+```
 
 ## Author
 
