@@ -1,5 +1,6 @@
 <h1 align="center">@DaanGamesDG/logger</h1>
-[![General Tests](https://github.com/DaanGamesDG/logger/actions/workflows/test.yml/badge.svg)](https://github.com/DaanGamesDG/logger/actions/workflows/test.yml)
+[![General Tests](https://github.com/DaanGamesDG/logger/actions/workflows/test.yml/badge.svg)](https://github.com/DaanGamesDG/logger/actions/workflows/test.yml)]
+
 
 > A simple logger you can use to log stuff in the console
 
