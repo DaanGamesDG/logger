@@ -23,9 +23,9 @@ Advanced
 
 ```ts
 /* Customlogger.ts */
-import { Structures } from "@daangamesdg/logger";
+import { Structure } from "@daangamesdg/logger";
 
-Structures.extend(
+Structure.extend(
 	"Logger",
 	(Logger) =>
 		class CustomLogger extends Logger {
@@ -38,13 +38,6 @@ Structures.extend(
 		}
 );
 
-// Required if you use TypeScript
-declare module "@daangamesdg/logger" {
-	class Logger {
-		test(): void;
-	}
-}
-
 /* index.ts */
 import "absolute/path/to/CustomLogger";
 import { Logger } from "@daangamesdg/logger";
@@ -53,7 +46,7 @@ const logger = new Logger({ name: "name", timestamp: true });
 logger.test(); // logs "test"
 ```
 
-*Note: the examples writting in TypeScript*
+_Note: the examples writting in TypeScript_
 
 ## Author
 
