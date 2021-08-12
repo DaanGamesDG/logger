@@ -52,7 +52,7 @@ export enum ColourCode {
 }
 
 /** The Formatter used to get nice text to show up in the console */
-export class Formatter {
+export default class Formatter {
 	/** Formats the input
 	 * @param {unkown[]} input
 	 * @param {{ name: String, level: "INFO" | "WARN" | "ERROR" | "TRACE" | "SILLY" | "DEBUG" | "FATAL"; timestamp: Date | number | null; }} config

@@ -2,7 +2,7 @@ import type { Formatter } from "./Formatter";
 import { Structure } from "./Structure";
 
 /** The logger itself */
-export class Logger {
+export default class Logger {
 	/** The name of the logger */
 	public readonly name: string;
 	/** If the logger should log the timestamp or not */

@@ -1,5 +1,5 @@
-import { Formatter } from "./Formatter";
-import { Logger } from "./Logger";
+import Formatter from "./Formatter";
+import Logger from "./Logger";
 
 /** Gets or extends structures to extend the built in, or already extended, classes to add more functionality. */
 export abstract class Structure {
