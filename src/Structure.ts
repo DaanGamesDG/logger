@@ -1,5 +1,4 @@
 import Formatter from "./Formatter";
-import Logger from "./Logger";
 
 /** Gets or extends structures to extend the built in, or already extended, classes to add more functionality. */
 export abstract class Structure {
@@ -30,11 +29,9 @@ export abstract class Structure {
 }
 
 const structures = {
-	Logger,
 	Formatter,
 };
 
 export interface Extendable {
-	Logger: typeof Logger;
 	Formatter: typeof Formatter;
 }

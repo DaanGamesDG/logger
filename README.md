@@ -19,16 +19,16 @@ const logger = new Logger({ name: "name", timestamp: true }); // options: { name
 logger.info(anything, you, like);
 ```
 
-Advanced
+Extending
 
 ```ts
-/* Customlogger.ts */
+/* CustomFormatter.ts */
 import { Structure } from "@daangamesdg/logger";
 
 Structure.extend(
-	"Logger",
-	(Logger) =>
-		class CustomLogger extends Logger {
+	"Formatter",
+	(Formatter) =>
+		class CustomFormatter extends Formatter {
 			// do what ever you want here
 
 			// example
@@ -38,11 +38,17 @@ Structure.extend(
 		}
 );
 
-/* index.ts */
-import "absolute/path/to/CustomLogger";
-import { Logger } from "@daangamesdg/logger";
+declare module "@daangamesdg/logger" {
+	class Formatter {
+		test(): void;
+	}
+}
 
-const logger = new Logger({ name: "name", timestamp: true });
+/* index.ts */
+import "absolute/path/to/CustomFormatter";
+import { Formatter } from "@daangamesdg/logger";
+
+const formatter = new Formatter().test();
 logger.test(); // logs "test"
 ```
 

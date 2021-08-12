@@ -1,7 +1,4 @@
-import { Structure } from "./Structure";
+export { Structure } from "./Structure";
 
-export { LogData, LoggerLevel, LoggerOptions } from "./Logger";
+export { default as Logger, LogData, LoggerLevel, LoggerOptions } from "./Logger";
 export { default as Formatter, ColourCode } from "./Formatter";
-
-const Logger = Structure.get("Logger");
-export { Logger, Structure };
