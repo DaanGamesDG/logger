@@ -1,4 +1,4 @@
 export { Structure } from "./Structure";
 
-export * from "./Logger";
-export * from "./Formatter";
+export { default as Logger, LogData, LoggerLevel, LoggerOptions } from "./Logger";
+export { default as Formatter, ColourCode } from "./Formatter";
