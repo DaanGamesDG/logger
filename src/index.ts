@@ -1,6 +1,4 @@
-import { Structure } from "./Structure";
+export { Structure } from "./Structure";
 
-const Formatter = Structure.get("Formatter");
-const Logger = Structure.get("Logger");
-
-export { Formatter, Logger, Structure };
+export * from "./Logger";
+export * from "./Formatter";
