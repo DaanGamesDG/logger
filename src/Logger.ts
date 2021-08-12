@@ -1,4 +1,4 @@
-import type { Formatter } from "./Formatter";
+import type Formatter from "./Formatter";
 import { Structure } from "./Structure";
 
 /** The logger itself */
