@@ -1,4 +1,4 @@
-<h1 align="center">@DaanGamesDG/logger</h1>
+<h1 align="center">@daangamesdg/logger</h1>
 
 > A simple logger you can use to log stuff in the console
 
@@ -13,7 +13,7 @@ yarn add / npm install @daangamesdg/logger
 Basic Usage
 
 ```ts
-import { Logger } from "@DaanGamesDG/logger";
+import { Logger } from "@daangamesdg/logger";
 
 const logger = new Logger({ name: "name", timestamp: true }); // options: { name: string; timestamp?: boolean (default = true) }
 logger.info(anything, you, like);
@@ -23,7 +23,7 @@ Advanced
 
 ```ts
 /* Customlogger.ts */
-import { Structures } from "@DaanGamesDG/logger";
+import { Structures } from "@daangamesdg/logger";
 
 Structures.extend(
 	"Logger",
@@ -39,7 +39,7 @@ Structures.extend(
 );
 
 // Required if you use TypeScript
-declare module "@DaanGamesDG/logger" {
+declare module "@daangamesdg/logger" {
 	class Logger {
 		test(): void;
 	}
@@ -47,7 +47,7 @@ declare module "@DaanGamesDG/logger" {
 
 /* index.ts */
 import "absolute/path/to/CustomLogger";
-import { Logger } from "@DaanGamesDG/logger";
+import { Logger } from "@daangamesdg/logger";
 
 const logger = new Logger({ name: "name", timestamp: true });
 logger.test(); // logs "test"
