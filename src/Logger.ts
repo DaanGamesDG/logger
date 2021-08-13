@@ -68,7 +68,7 @@ export default class Logger {
 		return this.write(input, { level: "SILLY", timestamp: Date.now() });
 	}
 
-	private write(input: unknown[], data: LogData): this {
+	public write(input: unknown[], data: LogData): this {
 		const options = {
 			timestamp: this.timestamp ? data.timestamp : null,
 			level: data.level,
