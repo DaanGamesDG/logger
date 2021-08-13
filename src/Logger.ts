@@ -7,7 +7,7 @@ export default class Logger {
 	public readonly name: string;
 	/** If the logger should log the timestamp or not */
 	public readonly timestamp: boolean;
-	private formatter: Formatter;
+	public formatter: Formatter;
 
 	/** Creates a new logger
 	 * @param options
