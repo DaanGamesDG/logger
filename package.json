@@ -12,7 +12,8 @@
 		"@typescript-eslint/parser": "^4.28.2",
 		"eslint": "^7.30.0",
 		"rimraf": "^3.0.2",
-		"typescript": "^4.3.5"
+		"typescript": "^4.3.5",
+		"dts-bundle": "^0.7.3"
 	},
 	"dependencies": {
 		"moment": "^2.29.1"
@@ -20,6 +21,7 @@
 	"scripts": {
 		"build": "rimraf ./dist && tsc --build",
 		"dev": "nodemon --exec ts-node src/index.ts",
+		"types": "dts-bundle --removeSource --name @daangamesdg/logger --main ./dist --out ../typings/index.d.ts --baseDir ./dist",
 		"start": "node .",
 		"lint": "eslint src"
 	},

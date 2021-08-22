@@ -78,7 +78,11 @@ export default class Formatter {
 			}
 
 			if (typeof data === "object") {
-				str += JSON.stringify(data);
+				str += inspect(data, {
+					depth: 2,
+					showHidden: true,
+					colors: true,
+				});
 				continue;
 			}
 
