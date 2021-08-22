@@ -1,6 +1,6 @@
 {
 	"name": "@daangamesdg/logger",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"description": "A simple logger you can use to log stuff in the console",
 	"main": "dist/index.js",
 	"author": "DaanGamesDG <daan@daangamesdg.wtf>",
