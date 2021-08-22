@@ -3,6 +3,7 @@
 	"version": "1.0.9",
 	"description": "A simple logger you can use to log stuff in the console",
 	"main": "dist/index.js",
+	"types": "typings/index.d.ts",
 	"author": "DaanGamesDG <daan@daangamesdg.wtf>",
 	"license": "MIT",
 	"private": false,
