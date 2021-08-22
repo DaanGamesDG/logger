@@ -7,7 +7,7 @@ export default class Logger {
 	public readonly name: string;
 	/** If the logger should log the timestamp or not */
 	public readonly timestamp: boolean;
-	private formatter: Formatter;
+	public formatter: Formatter;
 
 	/** Creates a new logger
 	 * @param options
@@ -68,7 +68,7 @@ export default class Logger {
 		return this.write(input, { level: "SILLY", timestamp: Date.now() });
 	}
 
-	private write(input: unknown[], data: LogData): this {
+	public write(input: unknown[], data: LogData): this {
 		const options = {
 			timestamp: this.timestamp ? data.timestamp : null,
 			level: data.level,
