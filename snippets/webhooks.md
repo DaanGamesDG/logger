@@ -1,6 +1,6 @@
 ## Discord webhook logging
 
-TypeScript:
+#### TypeScript:
 
 ```ts
 import { Logger as defaultLogger, LogData, LoggerOptions, Structure } from "@daangamesdg/logger";
@@ -91,7 +91,7 @@ export default class Logger extends defaultLogger {
 
 ---
 
-JavaScript:
+#### JavaScript:
 
 ```js
 const { Logger: defaultLogger, LogData, LoggerOptions, Structure } = require("@daangamesdg/logger");
