@@ -13,7 +13,7 @@
 		"@typescript-eslint/parser": "5.4.0",
 		"eslint": "8.2.0",
 		"rimraf": "3.0.2",
-		"typescript": "4.4.4",
+		"typescript": "4.5.2",
 		"dts-bundle": "0.7.3"
 	},
 	"dependencies": {
